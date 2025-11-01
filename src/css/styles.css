@@ -1,18 +1,55 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+p {
+  font-weight: 600;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  text-align: center;
+  margin-top: 8px;
+  border-width: 5px;
+  border-color: black;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #db34c5;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.is-hidden {
+  display: none;
+}
